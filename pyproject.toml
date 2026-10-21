@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openai-local-cli"
+version = "0.1.0"
+description = "Interactive CLI for OpenAI-compatible local AI endpoints with real-time streaming and TPS telemetry"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Khoi Pham Minh", email = "khoipm06@gmail.com" }
+]
+keywords = ["llm", "llama.cpp", "vllm", "ollama", "tps", "benchmark", "cli", "agent-skills"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.scripts]
+openai-local-cli = "openai_local_cli.chat:main"
+
+[tool.setuptools.packages.find]
+include = ["openai_local_cli*"]
